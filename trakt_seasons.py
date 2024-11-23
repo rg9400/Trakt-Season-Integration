@@ -98,7 +98,7 @@ if not (args.shows or args.libraries):
 # Set up the rotating log files
 size = 10*1024*1024  # 5MB
 max_files = 5  # Keep up to 5 logs
-log_path = os.environ.get('LOG_FOLDER', os.path.dirname(sys.argv[0]))v
+log_path = os.environ.get('LOG_FOLDER', os.path.dirname(sys.argv[0]))
 log_filename = os.path.join(log_path, 'trakt_seasons.log')
 file_logger = RotatingFileHandler(log_filename, maxBytes=size, backupCount=max_files)
 console = StreamHandler()
